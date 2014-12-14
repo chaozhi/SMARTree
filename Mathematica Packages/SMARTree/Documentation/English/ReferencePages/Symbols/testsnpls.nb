@@ -1,0 +1,250 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8089,        240]
+NotebookOptionsPosition[      5955,        177]
+NotebookOutlinePosition[      7468,        217]
+CellTagsIndexPosition[      7425,        214]
+WindowTitle->testsnpls - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["SMARTree",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:SMARTree/guide/SMARTree"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["SMARTREE PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"SMARTree\"\>":>Documentation`HelpLookup[
+       "paclet:SMARTree/guide/SMARTree"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"SMARTree/ref/testsnpls\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["SMARTree/ref/testsnpls"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/SMARTree/ref/\
+testsnpls.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
+             Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "SMARTree/ref/testsnpls", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["testsnpls", "ObjectName",
+ CellID->1224892054],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"testsnpls", "[", 
+       RowBox[{
+       "snpls", ",", "treels", ",", "nbp", ",", "theta", ",", "epsilon", ",", 
+        "modelid", ",", "msg"}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]gives True if the log likelihoods of SNP data given \
+the local trees (column 2 of treels) are consistent, and otherwise gives \
+False and prints message msg."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->4426543],
+
+Cell[TextData[{
+ StyleBox["snpls",
+  FontSlant->"Italic"],
+ " \[LongDash] SNP data matrix. Column 1 is the location of SNP sites, column \
+2 is the alleles vector, column 3 is the vector of allele frequecy, and the \
+last coclumn (column 4) is the log likelihood given the local tree."
+}], "Notes",
+ CellID->1067943069],
+
+Cell[TextData[{
+ StyleBox["treels",
+  FontSlant->"Italic"],
+ " \[LongDash] Local trees along chromosomes T(x), represented as a matrix. \
+Column 1 is the location of change-point, column 2 is the interval tree after \
+(including) the change-point, column 3 is the total branch length of the \
+tree, and the last column (column 4) is the transition probability between \
+subsequent trees.  Branch length (or time) is measured in unit of 2 Ne, where \
+Ne is the effective population size."
+}], "Notes",
+ CellID->309741522]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["SMARTree",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMARTree/guide/SMARTree"]], "MoreAbout",
+ CellID->106179239]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"testsnpls - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2014, 5, 9, 17, 8, 15.4002383}", "context" -> "SMARTree`", 
+    "keywords" -> {}, "index" -> True, "label" -> "SMARTree Paclet Symbol", 
+    "language" -> "en", "paclet" -> "SMARTree", "status" -> "None", "summary" -> 
+    "testsnpls[snpls, treels, nbp, theta, epsilon, modelid, msg] gives True \
+if the log likelihoods of SNP data given the local trees (column 2 of treels) \
+are consistent, and otherwise gives False and prints message msg.", 
+    "synonyms" -> {}, "title" -> "testsnpls", "type" -> "Symbol", "uri" -> 
+    "SMARTree/ref/testsnpls"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[602, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[681, 24, 179, 5, 70, "LinkTrail"],
+Cell[863, 31, 2297, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3163, 86, 52, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[CellGroupData[{
+Cell[3240, 91, 617, 16, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[3882, 111, 578, 17, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->4426543],
+Cell[4463, 130, 319, 7, 70, "Notes",
+ CellID->1067943069],
+Cell[4785, 139, 520, 10, 70, "Notes",
+ CellID->309741522]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5354, 155, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[5776, 169, 137, 3, 70, "MoreAbout",
+ CellID->106179239]
+}, Open  ]],
+Cell[5928, 175, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

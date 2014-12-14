@@ -1,0 +1,482 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     16172,        472]
+NotebookOptionsPosition[     13293,        382]
+NotebookOutlinePosition[     15042,        430]
+CellTagsIndexPosition[     14957,        425]
+WindowTitle->RandomBinomial - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["RandomGenerator",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:RandomGenerator/guide/RandomGenerator"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["RANDOMGENERATOR PACKAGE PACLET SYMBOL", "PacletNameCell"], Cell[
+    TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"RandomGenerator\"\>":>
+       Documentation`HelpLookup[
+       "paclet:RandomGenerator/guide/RandomGenerator"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"RandomGenerator/ref/RandomBinomial\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["RandomGenerator/ref/RandomBinomial"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/RandomGenerator/ref/\
+RandomBinomial.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "RandomGenerator/ref/RandomBinomial", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["RandomBinomial", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"RandomBinomial", "[", 
+       RowBox[{
+        StyleBox["n", "TI"], ",", " ", 
+        StyleBox["p", "TI"], ",", " ", 
+        StyleBox["lb", "TI"], ",", " ", 
+        StyleBox["s", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives s random draws from the binomial distribution \
+with parameters n and p, truncted to be not less than lb. The defaults lb=0 \
+and s=1."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->90162237],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->747225359],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<RandomGenerator`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->109863772],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{"n", ",", "p", ",", "lb", ",", "f", ",", "c", ",", "res"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", "=", "0.5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lb", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"size", "=", "10000"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"n", ",", "x"}], "]"}], "  ", 
+    RowBox[{"p", "^", "x"}], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "p"}], ")"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "x"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", 
+   RowBox[{"N", "[", 
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"f", "[", "x", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "lb", ",", "Infinity"}], "}"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"res", "=", 
+   RowBox[{"RandomBinomial", "[", 
+    RowBox[{"n", ",", "p", ",", "lb", ",", "size"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{
+          RowBox[{"Count", "[", 
+           RowBox[{"res", ",", "i"}], "]"}], "/", "size"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "lb", ",", 
+         RowBox[{"Max", "[", "res", "]"}]}], "}"}]}], "]"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+     RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}]}], "]"}], ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "[", "x", "]"}], "/", "c"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "lb", ",", 
+       RowBox[{"Max", "[", "res", "]"}]}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", "Thick"}], "}"}]}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "]"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->394819363],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+    "], {{0, 115}, {180, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{180, 115},
+  PlotRange->{{0, 180}, {0, 115}}]], "Output",
+ ImageSize->{184, 115},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->54427030]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"RandomBinomial", "[", 
+    RowBox[{"n", ",", "p", ",", "lb", ",", "size"}], "]"}], ";"}], "//", 
+  "Timing"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomBinomial", "[", 
+      RowBox[{"n", ",", "p", ",", "lb"}], "]"}], ",", 
+     RowBox[{"{", "size", "}"}]}], "]"}], ";"}], "//", 
+  "Timing"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"RandomInteger", "[", 
+    RowBox[{
+     RowBox[{"BinomialDistribution", "[", 
+      RowBox[{"n", ",", "p"}], "]"}], ",", "size"}], "]"}], ";"}], "//", 
+  "Timing"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"BinomialDistribution", "[", 
+       RowBox[{"n", ",", "p"}], "]"}], "]"}], ",", 
+     RowBox[{"{", "size", "}"}]}], "]"}], ";"}], "//", "Timing"}]}], "Input",
+ CellLabel->"In[3]:=",
+ CellID->169965345],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.796000000000002`", ",", "Null"}], "}"}]], "Output",
+ ImageSize->{92, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->393736575],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1.7820000000000031`", ",", "Null"}], "}"}]], "Output",
+ ImageSize->{92, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->500519249],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.`", ",", "Null"}], "}"}]], "Output",
+ ImageSize->{71, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->66179002],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4.187000000000001`", ",", "Null"}], "}"}]], "Output",
+ ImageSize->{92, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->24729938]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["RandomGenerator",
+ BaseStyle->"Link",
+ ButtonData->"paclet:RandomGenerator/guide/RandomGenerator"]], "MoreAbout",
+ CellID->884763]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RandomBinomial - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 2, 10, 20, 28, 20.1865566}", "context" -> 
+    "RandomGenerator`RandomDiscreteDistribution`", "keywords" -> {}, "index" -> 
+    True, "label" -> "RandomGenerator Package Paclet Symbol", "language" -> 
+    "en", "paclet" -> "RandomGenerator Package", "status" -> "None", 
+    "summary" -> 
+    "RandomBinomial[n, p, lb, s] gives s random draws from the binomial \
+distribution with parameters n and p, truncted to be not less than lb. The \
+defaults lb=0 and s=1.", "synonyms" -> {}, "title" -> "RandomBinomial", 
+    "type" -> "Symbol", "uri" -> "RandomGenerator/ref/RandomBinomial"}, 
+  "LinkTrails" -> "", "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4030, 115, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->90162237]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 14815, 418}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[607, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[686, 24, 200, 5, 70, "LinkTrail"],
+Cell[889, 31, 2396, 55, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3310, 90, 57, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3370, 93, 623, 17, 70, "Usage"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4030, 115, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->90162237],
+Cell[CellGroupData[{
+Cell[4515, 132, 148, 5, 70, "ExampleSection",
+ CellID->747225359],
+Cell[4666, 139, 124, 3, 70, "Input",
+ CellID->109863772],
+Cell[CellGroupData[{
+Cell[4815, 146, 2191, 66, 209, "Input",
+ CellID->394819363],
+Cell[7009, 214, 3715, 68, 136, "Output",
+ CellID->54427030]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10761, 287, 964, 30, 70, "Input",
+ CellID->169965345],
+Cell[11728, 319, 223, 7, 36, "Output",
+ CellID->393736575],
+Cell[11954, 328, 224, 7, 36, "Output",
+ CellID->500519249],
+Cell[12181, 337, 207, 7, 36, "Output",
+ CellID->66179002],
+Cell[12391, 346, 222, 7, 36, "Output",
+ CellID->24729938]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12674, 360, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[13096, 374, 155, 3, 70, "MoreAbout",
+ CellID->884763]
+}, Open  ]],
+Cell[13266, 380, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

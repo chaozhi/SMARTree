@@ -1,0 +1,423 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11566,        413]
+NotebookOptionsPosition[      8608,        319]
+NotebookOutlinePosition[      9600,        347]
+CellTagsIndexPosition[      9557,        344]
+WindowTitle->SMARTree - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["SMARTree", "GuideTitle",
+ CellID->942062912],
+
+Cell["Chaozhi Zheng", "GuideAbstract",
+ CellID->129022783],
+
+Cell[TextData[{
+ "The functions of this package provide components for Metroplolis coupled \
+Markov Chain Monte Carlo (",
+ Cell[BoxData[
+  SuperscriptBox["MC", "3"]], "InlineFormula"],
+ ") simulations in the inference of Sequential Markov Ancestral Recombination \
+Trees (SMARTree) from SNP data."
+}], "GuideAbstract",
+ CellID->2001916300],
+
+Cell[CellGroupData[{
+
+Cell["Definitions", "GuideFunctionsSubsection",
+ CellID->152258013],
+
+Cell[TextData[{
+ StyleBox["nsq",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Number of sequences/chromsomes."
+}], "GuideText",
+ CellID->813359922],
+
+Cell[TextData[{
+ StyleBox["nbp",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Length of chromosomes in unit of base pair."
+}], "GuideText",
+ CellID->95061961],
+
+Cell[TextData[{
+ StyleBox["treels",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Local trees along chromosomes T(x), represented as a matrix. Column 1 is \
+the location of change-point, column 2 is the interval tree after (including) \
+the change-point, column 3 is the total branch length of the tree, and the \
+last column (column 4) is the transition probability between subsequent \
+trees.  Branch length (or time) is measured in unit of 2 Ne, where Ne is the \
+effective population size."
+}], "GuideText",
+ CellID->361628544],
+
+Cell[TextData[{
+ StyleBox["snpls",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " SNP data matrix. Column 1 is the location of SNP sites, column 2 is the \
+alleles vector, column 3 is the vector of allele frequecy, and the last \
+coclumn (column 4) is the log likelihood given the local tree."
+}], "GuideText",
+ CellID->44338242],
+
+Cell[TextData[{
+ StyleBox["theta",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The scaled mutation rate. theta = 4 Ne mu, where mu is the mutation rate \
+per generation per bp."
+}], "GuideText",
+ CellID->581249711],
+
+Cell[TextData[{
+ StyleBox["rho",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The scaled recombiation rate. rho = 4 Ne r, where r is the recombation \
+rate per generation per bp. "
+}], "GuideText",
+ CellID->170810025],
+
+Cell[TextData[{
+ StyleBox["epsilon",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The probability of an allelic typing error."
+}], "GuideText",
+ CellID->438033069],
+
+Cell[TextData[{
+ StyleBox["chainstate",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The state of a MCMC chain consists of inverse temperature, log (full \
+posterior), {theta, epsilon, rho}, treels, adpaptive parameters, snpls}."
+}], "GuideText",
+ CellID->181994516],
+
+Cell[TextData[{
+ StyleBox["mcstate",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The matrix of chainstates, and the element ",
+ Cell[BoxData[
+  SubscriptBox[
+   RowBox[{"(", "mcstate", ")"}], "ij"]], "InlineFormula"],
+ " is the chainstate for the ",
+ Cell[BoxData[
+  SuperscriptBox["j", "th"]], "InlineFormula"],
+ " chain of the ",
+ Cell[BoxData[
+  SuperscriptBox["i", "th"]], "InlineFormula"],
+ " group. "
+}], "GuideText",
+ CellID->632006144],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->188365336]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SMARTree Sampler", "GuideFunctionsSubsection",
+ CellID->276777430],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["initializeSMARTchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/initializeSMARTchain"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " initializes parameters for ",
+ " one MCMC chain"
+}], "GuideText",
+ CellID->295073219],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["updateSMARTchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/updateSMARTchain"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " updates chainstate for one MCMC chain"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["swapSMARTchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/swapSMARTchain"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " swaps temperatures of two random chosen chains in a group."
+}], "GuideText",
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["permuteSMARTchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/permuteSMARTchain"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " permute temperaures of all chain  of a group."
+}], "GuideText",
+ CellID->249322640],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["saveSMARTchain",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/saveSMARTchain"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " save mcstate for all the chains."
+}], "GuideText",
+ CellID->5114829]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Likelihood", "GuideFunctionsSubsection",
+ CellID->104633457],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeLogPriorProb",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/TreeLogPriorProb"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Log prior probability of the tree  at first site."
+}], "GuideText",
+ CellID->150003555],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeLogLikelihood",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/TreeLogLikelihood"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Log likelihood of SNP data given  local trees."
+}], "GuideText",
+ CellID->415398908],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["PolymorphicProb",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/PolymorphicProb"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " The probablity that the number of minor alleles ",
+ "\[GreaterEqual]2."
+}], "GuideText",
+ CellID->46749767],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeTransitionProb",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/TreeTransitionProb"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Transition probability between two trees of distance ",
+ "\[LessEqual]",
+ " 1."
+}], "GuideText",
+ CellID->338773208],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeTransitionTypeI",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/TreeTransitionTypeI"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " Transtion type of two trees given their distance ",
+ "\[LessEqual]",
+ " 1."
+}], "GuideText",
+ CellID->16277625],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeTransitionTypeII",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/TreeTransitionTypeII"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ "  Transtion type of two trees given their distance ",
+ "\[LessEqual]",
+ " 2."
+}], "GuideText",
+ CellID->261312594],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["testtreels",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/testtreels"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " if the total branch lengths and the transition probabilities are same as \
+those contained in treels."
+}], "GuideText",
+ CellID->745805],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["testsnpls",
+  BaseStyle->"Link",
+  ButtonData->"paclet:SMARTree/ref/testsnpls"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " if the log likelihoods given local trees are same as those contained in \
+snpls."
+}], "GuideText",
+ CellID->343737521]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"SMARTree - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2014, 5, 9, 17, 8, 11.2701970}", "context" -> "SMARTree`", 
+    "keywords" -> {}, "index" -> True, "label" -> "S M A R Tree Guide", 
+    "language" -> "en", "paclet" -> "SMARTree", "status" -> "None", "summary" -> 
+    "Chaozhi Zheng", "synonyms" -> {}, "title" -> "SMARTree", "type" -> 
+    "Guide", "uri" -> "SMARTree/guide/SMARTree"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 75, 1, 70, "GuideColorBar"],
+Cell[679, 24, 209, 6, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[913, 34, 50, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[966, 37, 58, 1, 70, "GuideAbstract",
+ CellID->129022783],
+Cell[1027, 40, 339, 8, 70, "GuideAbstract",
+ CellID->2001916300],
+Cell[CellGroupData[{
+Cell[1391, 52, 67, 1, 70, "GuideFunctionsSubsection",
+ CellID->152258013],
+Cell[1461, 55, 176, 7, 70, "GuideText",
+ CellID->813359922],
+Cell[1640, 64, 187, 7, 70, "GuideText",
+ CellID->95061961],
+Cell[1830, 73, 559, 12, 70, "GuideText",
+ CellID->361628544],
+Cell[2392, 87, 356, 9, 70, "GuideText",
+ CellID->44338242],
+Cell[2751, 98, 244, 8, 70, "GuideText",
+ CellID->581249711],
+Cell[2998, 108, 246, 8, 70, "GuideText",
+ CellID->170810025],
+Cell[3247, 118, 192, 7, 70, "GuideText",
+ CellID->438033069],
+Cell[3442, 127, 295, 8, 70, "GuideText",
+ CellID->181994516],
+Cell[3740, 137, 473, 17, 70, "GuideText",
+ CellID->632006144],
+Cell[4216, 156, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->188365336]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4311, 162, 72, 1, 70, "GuideFunctionsSubsection",
+ CellID->276777430],
+Cell[4386, 165, 307, 10, 70, "GuideText",
+ CellID->295073219],
+Cell[4696, 177, 286, 8, 70, "GuideText",
+ CellID->203374175],
+Cell[4985, 187, 304, 8, 70, "GuideText",
+ CellID->1463276848],
+Cell[5292, 197, 296, 8, 70, "GuideText",
+ CellID->249322640],
+Cell[5591, 207, 275, 8, 70, "GuideText",
+ CellID->5114829]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5903, 220, 66, 1, 70, "GuideFunctionsSubsection",
+ CellID->104633457],
+Cell[5972, 223, 298, 8, 70, "GuideText",
+ CellID->150003555],
+Cell[6273, 233, 297, 8, 70, "GuideText",
+ CellID->415398908],
+Cell[6573, 243, 316, 9, 70, "GuideText",
+ CellID->46749767],
+Cell[6892, 254, 334, 11, 70, "GuideText",
+ CellID->338773208],
+Cell[7229, 267, 331, 11, 70, "GuideText",
+ CellID->16277625],
+Cell[7563, 280, 335, 11, 70, "GuideText",
+ CellID->261312594],
+Cell[7901, 293, 335, 9, 70, "GuideText",
+ CellID->745805],
+Cell[8239, 304, 315, 9, 70, "GuideText",
+ CellID->343737521]
+}, Open  ]]
+}, Open  ]],
+Cell[8581, 317, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

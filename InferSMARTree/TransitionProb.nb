@@ -1,0 +1,130 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3720,        121]
+NotebookOptionsPosition[      3076,         95]
+NotebookOutlinePosition[      3519,        112]
+CellTagsIndexPosition[      3476,        109]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"packagedir", "=", 
+   RowBox[{
+    RowBox[{"ParentDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "<>", 
+    "\"\<\\\\Mathematica Packages\>\""}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetDirectory", "[", "packagedir", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "[", "\"\<Genealogy`\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Needs", "[", "\"\<SMARTree`\>\"", "]"}]}], "Input",
+ CellChangeTimes->{{3.6014593755419135`*^9, 3.60145938315199*^9}, 
+   3.60145951518331*^9, {3.608638428312767*^9, 3.608638448673525*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "compat"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Combinatorica Graph and Permutations functionality has \
+been superseded by preloaded functionality. The package now being loaded may \
+conflict with this. Please see the Compatibility Guide for details.\"\>"}]], \
+"Message", "MSG",
+ CellChangeTimes->{3.608638767098281*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"tr", "=", 
+       RowBox[{"RandomCoalescentTree", "[", "n", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"TreeTransitionProb", "[", "tr", "]"}]}], ",", 
+     RowBox[{"{", "10000", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Mean", "[", "p", "]"}]}], "Input",
+ CellChangeTimes->{{3.6014593870220284`*^9, 3.6014593883220415`*^9}, {
+  3.601459468752846*^9, 3.601459483122989*^9}}],
+
+Cell[BoxData["0.18598923748512738`"], "Output",
+ CellChangeTimes->{{3.6014594795329533`*^9, 3.60145950516321*^9}, 
+   3.608638773428534*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", "=", "100"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"tr", "=", 
+       RowBox[{"RandomCoalescentTree", "[", "n", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"TreeTransitionProb", "[", "tr", "]"}]}], ",", 
+     RowBox[{"{", "10000", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Mean", "[", "p", "]"}]}], "Input",
+ CellChangeTimes->{3.601459498663145*^9}],
+
+Cell[BoxData["0.11701517319732939`"], "Output",
+ CellChangeTimes->{3.6014595928840866`*^9, 3.6086388675085187`*^9}]
+}, Open  ]]
+},
+WindowSize->{1662, 888},
+WindowMargins->{{3, Automatic}, {Automatic, 58}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 610, 13, 92, "Input"],
+Cell[1180, 37, 397, 9, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1614, 51, 612, 15, 112, "Input"],
+Cell[2229, 68, 140, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2406, 75, 536, 14, 112, "Input"],
+Cell[2945, 91, 115, 1, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

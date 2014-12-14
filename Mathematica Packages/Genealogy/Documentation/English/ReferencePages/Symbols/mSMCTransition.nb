@@ -1,0 +1,481 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     14955,        471]
+NotebookOptionsPosition[     11826,        385]
+NotebookOutlinePosition[     14108,        440]
+CellTagsIndexPosition[     14023,        435]
+WindowTitle->mSMCTransition - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Genealogy",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:Genealogy/guide/Genealogy"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["GENEALOGY PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy\"\>":>Documentation`HelpLookup[
+       "paclet:Genealogy/guide/Genealogy"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy/ref/mSMCTransition\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Genealogy/ref/mSMCTransition"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/Genealogy/ref/\
+mSMCTransition.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "Genealogy/ref/mSMCTransition", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["mSMCTransition", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"mSMCTransition", "[", "tree", "]"}]], "InlineFormula"],
+     " \[LineSeparator]randomizes a mSMC transition {",
+     StyleBox["e0",
+      FontSlant->"Italic"],
+     ",",
+     StyleBox["t1",
+      FontSlant->"Italic"],
+     ",",
+     StyleBox["e1",
+      FontSlant->"Italic"],
+     "} on ",
+     StyleBox["tree",
+      FontSlant->"Italic"],
+     ", where the recombation occurs on the branch ",
+     StyleBox["e0",
+      FontSlant->"Italic"],
+     ", and the emerging branch coalesces on the branch ",
+     StyleBox["e1",
+      FontSlant->"Italic"],
+     " at time ",
+     StyleBox["t1",
+      FontSlant->"Italic"],
+     ". "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"mSMCTransition", "[", 
+       RowBox[{"tree", ",", "els"}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]randomizes a mSMC transiton  {",
+     StyleBox["e0",
+      FontSlant->"Italic"],
+     ",",
+     StyleBox["t1",
+      FontSlant->"Italic"],
+     ",",
+     StyleBox["e1",
+      FontSlant->"Italic"],
+     "} on ",
+     StyleBox["tree",
+      FontSlant->"Italic"],
+     ", under the constraint that the branch on which the recombation occurs \
+is randomly chosen among the branch list ",
+     StyleBox["els,",
+      FontSlant->"Italic"],
+     "weighted by the branch length."
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"mSMCTransition", "[", 
+       RowBox[{"tree", ",", "e0"}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]randomizes a mSMC transiton  {",
+     StyleBox["e0",
+      FontSlant->"Italic"],
+     ",",
+     StyleBox["t1",
+      FontSlant->"Italic"],
+     ",",
+     StyleBox["e1",
+      FontSlant->"Italic"],
+     "} on ",
+     StyleBox["tree",
+      FontSlant->"Italic"],
+     ", under the constraint that the branch on which the recombation \
+occurson the branch ",
+     StyleBox["e0",
+      FontSlant->"Italic"],
+     "."
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"mSMCTransition", "[", 
+       RowBox[{"tree", ",", 
+        RowBox[{"{", 
+         RowBox[{"e0", ",", 
+          RowBox[{"-", "1"}], ",", "e1"}], "}"}]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]randomizes a mSMC transiton  {",
+     StyleBox["e0",
+      FontSlant->"Italic"],
+     ",",
+     StyleBox["t1",
+      FontSlant->"Italic"],
+     ",",
+     StyleBox["e1",
+      FontSlant->"Italic"],
+     "} on ",
+     StyleBox["tree",
+      FontSlant->"Italic"],
+     ", under the constraint that the recombation occurs on the branch ",
+     StyleBox["e0",
+      FontSlant->"Italic"],
+     ", and the emerging branch coalesces on the branch ",
+     StyleBox["e1",
+      FontSlant->"Italic"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, {None}}, "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->20251613],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->33596794],
+
+Cell[BoxData[
+ RowBox[{"<<", "Genealogy`"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->38285088],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tree", "=", 
+   RowBox[{"RandomCoalescentTree", "[", "4", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ShowLabeledGraph", "[", 
+  RowBox[{
+   RowBox[{"TreeToCombinatoricaGraph", "[", "tree", "]"}], ",", 
+   RowBox[{"VertexColor", "\[Rule]", "Red"}], ",", 
+   RowBox[{"EdgeColor", "\[Rule]", "Blue"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mSMCTransition", "[", "tree", 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->37467268],
+
+Cell[BoxData[
+ GraphicsBox[{{
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.75, 0.}, {0.875, 0.0038066109705893244`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{1., 0.}, {0.875, 0.0038066109705893244`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.5, 0.}, {0.6875, 0.11706789406211368`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.875, 0.0038066109705893244`}, {0.6875, 
+      0.11706789406211368`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.25, 0.}, {0.46875, 0.16601188123435953`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.6875, 0.11706789406211368`}, {0.46875, 
+      0.16601188123435953`}}], 
+     {GrayLevel[0]}}}, {
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{1., 0.}]}, 
+     {GrayLevel[0], InsetBox["1", Scaled[{-0.02, -0.02}, {1., 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.5, 0.}]}, 
+     {GrayLevel[0], InsetBox["2", Scaled[{-0.02, -0.02}, {0.5, 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.75, 0.}]}, 
+     {GrayLevel[0], 
+      InsetBox["3", Scaled[{-0.02, -0.02}, {0.75, 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.25, 0.}]}, 
+     {GrayLevel[0], 
+      InsetBox["4", Scaled[{-0.02, -0.02}, {0.25, 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.875, 0.0038066109705893244`}]}, 
+     {GrayLevel[0], 
+      InsetBox["5", 
+       Scaled[{-0.02, -0.02}, {0.875, 0.0038066109705893244`}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.6875, 0.11706789406211368`}]}, 
+     {GrayLevel[0], 
+      InsetBox["6", 
+       Scaled[{-0.02, -0.02}, {0.6875, 0.11706789406211368`}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.46875, 0.16601188123435953`}]}, 
+     {GrayLevel[0], 
+      InsetBox["7", 
+       Scaled[{-0.02, -0.02}, {0.46875, 0.16601188123435953`}], {1, 0}]}, 
+     {GrayLevel[0]}}}},
+  AlignmentPoint->Center,
+  AspectRatio->Automatic,
+  Axes->False,
+  AxesLabel->None,
+  AxesOrigin->Automatic,
+  AxesStyle->{},
+  Background->None,
+  BaseStyle->{},
+  BaselinePosition->Automatic,
+  ColorOutput->Automatic,
+  ContentSelectable->Automatic,
+  CoordinatesToolOptions:>Automatic,
+  DisplayFunction:>$DisplayFunction,
+  Epilog->{},
+  FormatType:>TraditionalForm,
+  Frame->False,
+  FrameLabel->None,
+  FrameStyle->{},
+  FrameTicks->Automatic,
+  FrameTicksStyle->{},
+  GridLines->None,
+  GridLinesStyle->{},
+  ImageMargins->0.,
+  ImagePadding->All,
+  ImageSize->Automatic,
+  ImageSizeRaw->Automatic,
+  LabelStyle->{},
+  Method->Automatic,
+  PlotLabel->None,
+  PlotRange->{{0.2, 1.05}, {-0.21699405938282024`, 0.38300594061717974`}},
+  PlotRangeClipping->False,
+  PlotRangePadding->Automatic,
+  PlotRegion->Automatic,
+  PreserveImageOptions->Automatic,
+  Prolog->{},
+  RotateLabel->True,
+  Ticks->Automatic,
+  TicksStyle->{}]], "Output",
+ ImageSize->{364, 254},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->345207328],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"5", ",", "6"}], "}"}], ",", "0.8486026362198119`", ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", 
+     RowBox[{"-", "1"}]}], "}"}]}], "}"}]], "Output",
+ ImageSize->{182, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->131244916]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["Genealogy",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Genealogy/guide/Genealogy"]], "MoreAbout",
+ CellID->73104799]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"mSMCTransition - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 7, 27, 22, 7, 6.2483731}", "context" -> "Genealogy`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Genealogy Paclet Symbol", 
+    "language" -> "en", "paclet" -> "Genealogy", "status" -> "None", 
+    "summary" -> 
+    "mSMCTransition[tree] randomizes a mSMC transition {e0,t1,e1} on tree, \
+where the recombation occurs on the branch e0, and the emerging branch \
+coalesces on the branch e1 at time t1. mSMCTransition[tree, els] randomizes a \
+mSMC transiton {e0,t1,e1} on tree, under the constraint that the branch on \
+which the recombation occurs is randomly chosen among the branch list \
+els,weighted by the branch length.mSMCTransition[tree, e0] randomizes a mSMC \
+transiton {e0,t1,e1} on tree, under the constraint that the branch on which \
+the recombation occurson the branch e0.mSMCTransition[tree, {e0, -1, e1}] \
+randomizes a mSMC transiton {e0,t1,e1} on tree, under the constraint that the \
+recombation occurs on the branch e0, and the emerging branch coalesces on the \
+branch e1.", "synonyms" -> {}, "title" -> "mSMCTransition", "type" -> 
+    "Symbol", "uri" -> "Genealogy/ref/mSMCTransition"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[6197, 196, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->20251613]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13881, 428}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[607, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[686, 24, 182, 5, 70, "LinkTrail"],
+Cell[871, 31, 2327, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3201, 86, 57, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3261, 89, 2911, 103, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[6197, 196, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->20251613],
+Cell[CellGroupData[{
+Cell[6682, 213, 147, 5, 70, "ExampleSection",
+ CellID->33596794],
+Cell[6832, 220, 96, 3, 70, "Input",
+ CellID->38285088],
+Cell[CellGroupData[{
+Cell[6953, 227, 503, 13, 70, "Input",
+ CellID->37467268],
+Cell[7459, 242, 3349, 100, 275, "Output",
+ CellID->345207328],
+Cell[10811, 344, 351, 12, 36, "Output",
+ CellID->131244916]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11223, 363, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[11645, 377, 139, 3, 70, "MoreAbout",
+ CellID->73104799]
+}, Open  ]],
+Cell[11799, 383, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

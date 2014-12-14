@@ -1,0 +1,208 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6897,        198]
+NotebookOptionsPosition[      4927,        145]
+NotebookOutlinePosition[      6568,        186]
+CellTagsIndexPosition[      6525,        183]
+WindowTitle->PolymorphicProb - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["SMARTree",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:SMARTree/guide/SMARTree"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["SMARTREE PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"SMARTree\"\>":>Documentation`HelpLookup[
+       "paclet:SMARTree/guide/SMARTree"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"SMARTree/ref/PolymorphicProb\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["SMARTree/ref/PolymorphicProb"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/SMARTree/ref/\
+PolymorphicProb.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "SMARTree/ref/PolymorphicProb", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["PolymorphicProb", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"PolymorphicProb", "[", 
+       RowBox[{"tree", ",", " ", "theta", ",", " ", "epsilon"}], "]"}]], 
+      "InlineFormula"],
+     " \[LineSeparator]returns the probabllity that the number of minor \
+alleles \[GreaterEqual] 2 results for mutation and typing error, given the ",
+     StyleBox["tree",
+      FontSlant->"Italic"],
+     ". "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       RowBox[{"PolymorphicProb", "[", 
+        RowBox[{"trees", ",", " ", "theta", ",", " ", "epsilon"}], "]"}], 
+       " "}]], "InlineFormula"],
+     "\[LineSeparator]returns a list of probabllities that the number of \
+minor alleles \[GreaterEqual] 2 results for mutation and typing error, given \
+a list of ",
+     StyleBox["trees",
+      FontSlant->"Italic"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["SMARTree",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMARTree/guide/SMARTree"]], "MoreAbout",
+ CellID->338472207]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"PolymorphicProb - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2014, 5, 9, 17, 8, 13.6202205}", "context" -> "SMARTree`", 
+    "keywords" -> {}, "index" -> True, "label" -> "SMARTree Paclet Symbol", 
+    "language" -> "en", "paclet" -> "SMARTree", "status" -> "None", "summary" -> 
+    "PolymorphicProb[tree, theta, epsilon] returns the probabllity that the \
+number of minor alleles >= 2 results for mutation and typing error, given the \
+tree. PolymorphicProb[trees, theta, epsilon] returns a list of probabllities \
+that the number of minor alleles >= 2 results for mutation and typing error, \
+given a list of trees.", "synonyms" -> {}, "title" -> "PolymorphicProb", 
+    "type" -> "Symbol", "uri" -> "SMARTree/ref/PolymorphicProb"}, 
+  "LinkTrails" -> "", "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[608, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[687, 24, 179, 5, 70, "LinkTrail"],
+Cell[869, 31, 2323, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3195, 86, 58, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3256, 89, 1045, 30, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[4326, 123, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[4748, 137, 137, 3, 70, "MoreAbout",
+ CellID->338472207]
+}, Open  ]],
+Cell[4900, 143, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

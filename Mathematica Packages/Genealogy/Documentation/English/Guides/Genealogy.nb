@@ -1,0 +1,467 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13161,        457]
+NotebookOptionsPosition[      9881,        353]
+NotebookOutlinePosition[     10877,        381]
+CellTagsIndexPosition[     10834,        378]
+WindowTitle->Genealogy - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["Genealogy", "GuideTitle",
+ CellID->942062912],
+
+Cell["Chaozhi Zheng", "GuideAbstract",
+ CellID->44493007],
+
+Cell["\<\
+This package provides functions for genearing a genealogy of aligned DNA \
+sequences and extracting properties from it. If there are no recombiations, \
+the genealogy is represented as a coalescent tree, and otherwise it may be \
+represented as an ancestral recombiation graph (ARG) or a list of local \
+trees. The sequences are represented continuously from 0 to 1 if not \
+explictly specified. \
+\>", "GuideAbstract",
+ CellID->2001916300],
+
+Cell[CellGroupData[{
+
+Cell["ARG", "GuideFunctionsSubsection",
+ CellID->189057291],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomARG",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/RandomARG"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates an ARG."
+}], "GuideText",
+ CellID->304806752],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["ARGToLocalTrees",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/ARGToLocalTrees"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " transforms an ARG into a list of genealogical trees at recombination \
+points."
+}], "GuideText",
+ CellID->276942150],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["GetLocalTree",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/GetLocalTree"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gets the local tree at a given position along sequences from an ARG"
+}], "GuideText",
+ CellID->232423783],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["ResetTreeX",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/ResetTreeX"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " resets the x cordinates of vertices of a tree"
+}], "GuideText",
+ CellID->377194205],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["ToCoalescentTree",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/ToCoalescentTree"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " transforms tree format from a graph into a CoalescentTree."
+}], "GuideText",
+ CellID->323939131],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->311258892]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Coalescent Tree", "GuideFunctionsSubsection",
+ CellID->403015394],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["CoalescentTree",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/CoalescentTree"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " represents a data structure for a coalescent tree."
+}], "GuideText",
+ CellID->40524071],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomCoalescentTree",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/RandomCoalescentTree"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "generates a CoalescentTree."
+}], "GuideText",
+ CellID->391282006],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["ToCombinatoricaGraph",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/ToCombinatoricaGraph"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " transforms tree format from a CoalescentTree into a CombinatoricaGraph."
+}], "GuideText",
+ CellID->356108614],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["SameCoalescentTreeQ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/SameCoalescentTreeQ"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " judges whether two trees are same."
+}], "GuideText",
+ CellID->561563740],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["SubCoalescentTree",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/SubCoalescentTree"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " extracts the coalescent tree for a subset of leaves."
+}], "GuideText",
+ CellID->311032212],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeTopology",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/TreeTopology"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gets the topology of a tree."
+}], "GuideText",
+ CellID->72795254],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeToAdjacencyList",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/TreeToAdjacencyList"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gets the adjacency list of a tree."
+}], "GuideText",
+ CellID->270962440],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeNodeParent",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/TreeNodeParent"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gets the parent node of a node of a tree."
+}], "GuideText",
+ CellID->172915720],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["LeafNumber",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/LeafNumber"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gets the number of leaves of a tree."
+}], "GuideText",
+ CellID->443157577],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TotalBranchHeight",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/TotalBranchHeight"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gets the total heights of branches of a tree."
+}], "GuideText",
+ CellID->76814328],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["BranchHeights",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/BranchHeights"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gets a list of branch heights of a tree."
+}], "GuideText",
+ CellID->25508162],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeHeight",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/TreeHeight"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gets the height of a tree."
+}], "GuideText",
+ CellID->44023020],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeCorrelation",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/TreeCorrelation"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " gives the correlation coefficient between two trees."
+}], "GuideText",
+ CellID->436928051],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["TreeRFDistance",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/TreeRFDistance"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ "  gives the RF distance between two trees."
+}], "GuideText",
+ CellID->8525299],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->84903239]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Local Trees", "GuideFunctionsSubsection",
+ CellID->204311299],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["mSMCRecombination",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/mSMCRecombination"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates a recombination event on a tree based on the modified Sequential \
+Markov Coalescent (mSMC) model."
+}], "GuideText",
+ CellID->420228910],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["mSMCCoalescent",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/mSMCCoalescent"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates the coalescent event of the emerging branch based on the \
+stanadard coalescent without recombation model."
+}], "GuideText",
+ CellID->59913287],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["mSMCTransition",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/mSMCTransition"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates the mSMC transtion on a tree. "
+}], "GuideText",
+ CellID->711116823],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["NextLocalTree",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/NextLocalTree"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "gets the tree from a tree and a transition operator."
+}], "GuideText",
+ CellID->36927571],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomNextLocalTree",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/RandomNextLocalTree"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "generates a random tree from the current tree after one recombination \
+event, based on the mSMC process."
+}], "GuideText",
+ CellID->140823066],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomSequentialTrees",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/RandomSequentialTrees"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates local trees along chromosomes based on the mSMC process. "
+}], "GuideText",
+ CellID->737037291],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomSNPs",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Genealogy/ref/RandomSNPs"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates SNPs by simulating mutations on local trees. "
+}], "GuideText",
+ CellID->641502350]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Genealogy - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 7, 27, 22, 6, 55.2815538}", "context" -> "Genealogy`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Genealogy Guide", 
+    "language" -> "en", "paclet" -> "Genealogy", "status" -> "None", 
+    "summary" -> "Chaozhi Zheng", "synonyms" -> {}, "title" -> "Genealogy", 
+    "type" -> "Guide", "uri" -> "Genealogy/guide/Genealogy"}, "LinkTrails" -> 
+  "", "SearchTextTranslated" -> ""},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[602, 21, 75, 1, 70, "GuideColorBar"],
+Cell[680, 24, 209, 6, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[914, 34, 51, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[968, 37, 57, 1, 70, "GuideAbstract",
+ CellID->44493007],
+Cell[1028, 40, 450, 8, 70, "GuideAbstract",
+ CellID->2001916300],
+Cell[CellGroupData[{
+Cell[1503, 52, 59, 1, 70, "GuideFunctionsSubsection",
+ CellID->189057291],
+Cell[1565, 55, 253, 8, 70, "GuideText",
+ CellID->304806752],
+Cell[1821, 65, 326, 9, 70, "GuideText",
+ CellID->276942150],
+Cell[2150, 76, 309, 8, 70, "GuideText",
+ CellID->232423783],
+Cell[2462, 86, 283, 8, 70, "GuideText",
+ CellID->377194205],
+Cell[2748, 96, 308, 8, 70, "GuideText",
+ CellID->323939131],
+Cell[3059, 106, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->311258892]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3154, 112, 71, 1, 70, "GuideFunctionsSubsection",
+ CellID->403015394],
+Cell[3228, 115, 295, 8, 70, "GuideText",
+ CellID->40524071],
+Cell[3526, 125, 293, 10, 70, "GuideText",
+ CellID->391282006],
+Cell[3822, 137, 332, 9, 70, "GuideText",
+ CellID->356108614],
+Cell[4157, 148, 293, 9, 70, "GuideText",
+ CellID->561563740],
+Cell[4453, 159, 307, 9, 70, "GuideText",
+ CellID->311032212],
+Cell[4763, 170, 269, 8, 70, "GuideText",
+ CellID->72795254],
+Cell[5035, 180, 293, 9, 70, "GuideText",
+ CellID->270962440],
+Cell[5331, 191, 287, 8, 70, "GuideText",
+ CellID->172915720],
+Cell[5621, 201, 274, 8, 70, "GuideText",
+ CellID->443157577],
+Cell[5898, 211, 299, 9, 70, "GuideText",
+ CellID->76814328],
+Cell[6200, 222, 283, 8, 70, "GuideText",
+ CellID->25508162],
+Cell[6486, 232, 263, 8, 70, "GuideText",
+ CellID->44023020],
+Cell[6752, 242, 300, 8, 70, "GuideText",
+ CellID->436928051],
+Cell[7055, 252, 285, 8, 70, "GuideText",
+ CellID->8525299],
+Cell[7343, 262, 57, 1, 70, "GuideDelimiterSubsection",
+ CellID->84903239]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7437, 268, 67, 1, 70, "GuideFunctionsSubsection",
+ CellID->204311299],
+Cell[7507, 271, 363, 10, 70, "GuideText",
+ CellID->420228910],
+Cell[7873, 283, 361, 9, 70, "GuideText",
+ CellID->59913287],
+Cell[8237, 294, 286, 8, 70, "GuideText",
+ CellID->711116823],
+Cell[8526, 304, 300, 9, 70, "GuideText",
+ CellID->36927571],
+Cell[8829, 315, 369, 11, 70, "GuideText",
+ CellID->140823066],
+Cell[9201, 328, 330, 9, 70, "GuideText",
+ CellID->737037291],
+Cell[9534, 339, 293, 8, 70, "GuideText",
+ CellID->641502350]
+}, Open  ]]
+}, Open  ]],
+Cell[9854, 351, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

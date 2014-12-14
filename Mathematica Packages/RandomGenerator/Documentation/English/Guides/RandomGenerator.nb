@@ -1,0 +1,235 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6638,        225]
+NotebookOptionsPosition[      4616,        162]
+NotebookOutlinePosition[      5662,        191]
+CellTagsIndexPosition[      5619,        188]
+WindowTitle->RandomGenerator - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["RandomGenerator", "GuideTitle",
+ CellID->942062912],
+
+Cell["Chaozhi Zheng", "GuideAbstract",
+ CellID->670154038],
+
+Cell["\<\
+The package provides random generators for one dimensional discrete random \
+variable, and for some special forms of multi-normal distributions.\
+\>", "GuideAbstract",
+ CellID->2001916300],
+
+Cell[CellGroupData[{
+
+Cell["Discrete Distribution", "GuideFunctionsSubsection",
+ CellID->152959940],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["DiscreteRatioOfUniform",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/DiscreteRatioOfUniform"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates pseudorandom integers by the algorithm of discrete ratio of \
+uniform"
+}], "GuideText",
+ CellID->54151134],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomPoisson",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/RandomPoisson"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates pseudorandom integers following a Poisson distribution"
+}], "GuideText",
+ CellID->112729680],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomNegativeBinomial",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/RandomNegativeBinomial"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates pseudorandom integers following a negative binomial distribution"
+}], "GuideText",
+ CellID->479967750],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomBinomial",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/RandomBinomial"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " generates pseudorandom integers following a binomial distribution"
+}], "GuideText",
+ CellID->137885077]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Continuous Distribution", "GuideFunctionsSubsection",
+ CellID->129288195],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomMultiNormVariance",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/RandomMultiNormVariance"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " draws from a multivariate distribution given mean and variance matrix"
+}], "GuideText",
+ CellID->664711635],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomMultiNormPrecision",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/RandomMultiNormPrecision"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " draws from a multivariate distribution given mean and precision matrix"
+}], "GuideText",
+ CellID->466499058],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomCanonicalMultiNorm",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/RandomCanonicalMultiNorm"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " draws from a multivariate distribution represented canonically"
+}], "GuideText",
+ CellID->54651870],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomCanonicalMultiNorm2",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/RandomCanonicalMultiNorm2"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " draws from a set of multivariate distributions, which are represented \
+canonically and have same precision matrix"
+}], "GuideText",
+ CellID->80985715],
+
+Cell[TextData[{
+ Cell[TextData[ButtonBox["RandomOneSideTruncNorm",
+  BaseStyle->"Link",
+  ButtonData->"paclet:RandomGenerator/ref/RandomOneSideTruncNorm"]], 
+  "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " raw from a standard normal distribution,truncted to be one side"
+}], "GuideText",
+ CellID->216989105]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"RandomGenerator - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 2, 10, 20, 28, 15.5065484}", "context" -> 
+    "RandomGenerator`", "keywords" -> {}, "index" -> True, "label" -> 
+    "Random Generator Guide", "language" -> "en", "paclet" -> 
+    "RandomGenerator", "status" -> "None", "summary" -> "Chaozhi Zheng", 
+    "synonyms" -> {}, "title" -> "RandomGenerator", "type" -> "Guide", "uri" -> 
+    "RandomGenerator/guide/RandomGenerator"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (February 23, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[608, 21, 75, 1, 70, "GuideColorBar"],
+Cell[686, 24, 209, 6, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[920, 34, 57, 1, 70, "GuideTitle",
+ CellID->942062912],
+Cell[980, 37, 58, 1, 70, "GuideAbstract",
+ CellID->670154038],
+Cell[1041, 40, 198, 4, 70, "GuideAbstract",
+ CellID->2001916300],
+Cell[CellGroupData[{
+Cell[1264, 48, 77, 1, 70, "GuideFunctionsSubsection",
+ CellID->152959940],
+Cell[1344, 51, 349, 10, 70, "GuideText",
+ CellID->54151134],
+Cell[1696, 63, 317, 9, 70, "GuideText",
+ CellID->112729680],
+Cell[2016, 74, 345, 9, 70, "GuideText",
+ CellID->479967750],
+Cell[2364, 85, 320, 9, 70, "GuideText",
+ CellID->137885077]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2721, 99, 79, 1, 70, "GuideFunctionsSubsection",
+ CellID->129288195],
+Cell[2803, 102, 342, 9, 70, "GuideText",
+ CellID->664711635],
+Cell[3148, 113, 345, 9, 70, "GuideText",
+ CellID->466499058],
+Cell[3496, 124, 336, 9, 70, "GuideText",
+ CellID->54651870],
+Cell[3835, 135, 390, 10, 70, "GuideText",
+ CellID->80985715],
+Cell[4228, 147, 334, 9, 70, "GuideText",
+ CellID->216989105]
+}, Open  ]]
+}, Open  ]],
+Cell[4589, 160, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

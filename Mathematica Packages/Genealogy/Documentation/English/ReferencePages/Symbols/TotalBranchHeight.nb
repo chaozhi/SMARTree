@@ -1,0 +1,309 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9401,        299]
+NotebookOptionsPosition[      6757,        217]
+NotebookOutlinePosition[      8487,        265]
+CellTagsIndexPosition[      8403,        260]
+WindowTitle->TotalBranchHeight - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Genealogy",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:Genealogy/guide/Genealogy"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["GENEALOGY PACKAGE PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy\"\>":>Documentation`HelpLookup[
+       "paclet:Genealogy/guide/Genealogy"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy/ref/TotalBranchHeight\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Genealogy/ref/TotalBranchHeight"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/Genealogy/ref/\
+TotalBranchHeight.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "Genealogy/ref/TotalBranchHeight", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["TotalBranchHeight", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"TotalBranchHeight", "[", 
+       StyleBox["tree", "TI"], "]"}]], "InlineFormula"],
+     "\[LineSeparator] returns the total heights of branches of ",
+     StyleBox["tree.",
+      FontSlant->"Italic"]
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"TotalBranchHeight", "[", 
+       RowBox[{"{", 
+        RowBox[{"tree1", ",", 
+         RowBox[{"tree2", ".."}]}], "}"}], "]"}]], "InlineFormula"],
+     "\[LineSeparator] returns a list of the total heights of branches for \
+tree1, tree2 ..."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->170049701],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->771213849],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "Genealogy`"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->415701435],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "compat"}], "MessageName"], ":", 
+  " ", "\<\"Combinatorica Graph and Permutations functionality has been \
+superseded by preloaded functionaliy. The package now being loaded may \
+conflict with this. Please see the Compatibility Guide for details.\"\>"}]], \
+"Message", "MSG",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->183682840]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"TotalBranchHeight", "[", 
+  RowBox[{"RandomCoalescentTree", "[", "5", "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TotalBranchHeight", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"RandomCoalescentTree", "[", "5", "]"}], ",", 
+    RowBox[{"{", "3", "}"}]}], "]"}], "]"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->160884968],
+
+Cell[BoxData["2.5790933352680034`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->622970593],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2.2176559444973756`", ",", "9.676647437728102`", ",", 
+   "1.810667301998896`"}], "}"}]], "Output",
+ ImageSize->{187, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->185834646]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["Genealogy",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Genealogy/guide/Genealogy"]], "MoreAbout",
+ CellID->179468436]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"TotalBranchHeight - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 7, 27, 22, 7, 17.6519931}", "context" -> 
+    "Genealogy`CoalescentTree`", "keywords" -> {}, "index" -> True, "label" -> 
+    "Genealogy Package Paclet Symbol", "language" -> "en", "paclet" -> 
+    "Genealogy Package", "status" -> "None", "summary" -> 
+    "TotalBranchHeight[tree] returns the total heights of branches of \
+tree.TotalBranchHeight[{tree1, tree2 ..}] returns a list of the total heights \
+of branches for tree1, tree2 ...", "synonyms" -> {}, "title" -> 
+    "TotalBranchHeight", "type" -> "Symbol", "uri" -> 
+    "Genealogy/ref/TotalBranchHeight"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4070, 115, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->170049701]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 8260, 253}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[610, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[689, 24, 182, 5, 70, "LinkTrail"],
+Cell[874, 31, 2347, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3224, 86, 60, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3287, 89, 758, 22, 70, "Usage"],
+Cell[CellGroupData[{
+Cell[4070, 115, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->170049701],
+Cell[CellGroupData[{
+Cell[4556, 132, 148, 5, 70, "ExampleSection",
+ CellID->771213849],
+Cell[CellGroupData[{
+Cell[4729, 141, 97, 3, 70, "Input",
+ CellID->415701435],
+Cell[4829, 146, 405, 9, 70, "Message",
+ CellID->183682840]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5271, 160, 366, 10, 70, "Input",
+ CellID->160884968],
+Cell[5640, 172, 176, 5, 36, "Output",
+ CellID->622970593],
+Cell[5819, 179, 273, 9, 36, "Output",
+ CellID->185834646]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6153, 195, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[6575, 209, 140, 3, 70, "MoreAbout",
+ CellID->179468436]
+}, Open  ]],
+Cell[6730, 215, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

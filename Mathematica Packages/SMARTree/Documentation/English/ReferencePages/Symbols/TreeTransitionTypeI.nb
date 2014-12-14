@@ -1,0 +1,495 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     18058,        485]
+NotebookOptionsPosition[     15008,        393]
+NotebookOutlinePosition[     16909,        442]
+CellTagsIndexPosition[     16824,        437]
+WindowTitle->TreeTransitionTypeI - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["SMARTree",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:SMARTree/guide/SMARTree"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["SMARTREE PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"SMARTree\"\>":>Documentation`HelpLookup[
+       "paclet:SMARTree/guide/SMARTree"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"SMARTree/ref/TreeTransitionTypeI\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["SMARTree/ref/TreeTransitionTypeI"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/SMARTree/ref/\
+TreeTransitionTypeI.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "SMARTree/ref/TreeTransitionTypeI", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["TreeTransitionTypeI", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"TreeTransitionTypeI", "[", 
+       RowBox[{"tree1", ",", " ", "tree2"}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]returns the transition type. If tree1=tree2, returns \
+{0,0}. If the distance is greater than 1, returns {-1,-1}.  If the distance = \
+1, returns {1, {operator1, ..}}. An operator {e1, tc,ec) denoting a mSMC \
+transtion where the recombination event occurs on the edge ",
+     StyleBox["e1",
+      FontSlant->"Italic"],
+     " of",
+     StyleBox[" tree1",
+      FontSlant->"Italic"],
+     " and the emerging branch coaleces on the branch ",
+     StyleBox["ec",
+      FontSlant->"Italic"],
+     " of",
+     StyleBox[" tree1",
+      FontSlant->"Italic"],
+     " at time ",
+     StyleBox["tc",
+      FontSlant->"Italic"],
+     ".   "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->177409807],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->13226149],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"<<", "Genealogy`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "SMARTree`"}]}], "Input",
+ CellLabel->"In[1]:=",
+ CellID->623793352],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "compat"}], "MessageName"], ":", 
+  " ", "\<\"Combinatorica Graph and Permutations functionality has been \
+superseded by preloaded functionaliy. The package now being loaded may \
+conflict with this. Please see the Compatibility Guide for details.\"\>"}]], \
+"Message", "MSG",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->351691725]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tree1", "=", 
+   RowBox[{"RandomCoalescentTree", "[", "5", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tree2", "=", 
+   RowBox[{"Last", "[", 
+    RowBox[{"RandomNextLocalTree", "[", "tree1", "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TreeTransitionTypeI", "[", 
+  RowBox[{"tree1", ",", "tree1"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TreeTransitionTypeI", "[", 
+  RowBox[{"tree1", ",", "tree2"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TreeTransitionTypeI", "[", 
+  RowBox[{"tree1", ",", 
+   RowBox[{"RandomCoalescentTree", "[", "5", "]"}]}], "]"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->3416801],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0"}], "}"}]], "Output",
+ ImageSize->{43, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->16467154],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"3", ",", "8"}], "}"}], ",", "0.6617647168435694`", ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "9"}], "}"}]}], "}"}], "}"}]}], "}"}]], "Output",
+ ImageSize->{220, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->616501077],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "1"}], ",", 
+   RowBox[{"-", "1"}]}], "}"}]], "Output",
+ ImageSize->{59, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->35220063]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{"MapIndexed", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ShowGraph", "[", 
+       RowBox[{
+        RowBox[{"TreeToCombinatoricaGraph", "[", "#", "]"}], ",", 
+        RowBox[{"VertexLabel", "\[Rule]", "True"}], ",", 
+        RowBox[{"VertexColor", "\[Rule]", "Red"}], ",", 
+        RowBox[{"EdgeColor", "\[Rule]", "Blue"}], ",", 
+        RowBox[{"PlotLabel", "\[Rule]", 
+         RowBox[{"\"\<tree\>\"", "<>", 
+          RowBox[{"ToString", "[", 
+           RowBox[{"First", "[", "#2", "]"}], "]"}]}]}]}], "]"}], "&"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"tree1", ",", "tree2"}], "}"}]}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "500"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->161266198],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJztnV+IXNUdx8dEk8GibmPUPCiuEnGJtGyVliSExrSlbEEh1SCrFFltHbZY
+MdiCK63J41J82ME+DBQkVJSFvqT2z2zTlwV9CD4lFukKQzu1LSz0ZYstpNHq
+7ffMuXPn787O3Hvn3nPvfD5MNvN/zr339/ve3/md3z3nrqeff6S0q1Ao/LCo
+P4889eKJF1546qVHr9WDr730o2ee3q07Z/XvP9cUCua+BwAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAuaNaKhwt19JuBUAq1MpHCw1K1bSbAtCXWrkUQqGt
+ZaPtkANCuEDwEUU4uAG4SbUU0jQl7xg15IDQLmAwUQ6hO7iHCTuCjqUelMom
+IDem7r/StPquhx7aDvkgggs0n0bbwTlqtWpTof384dFmV9Pe8ZPqXQ/tZ9F2
+yD5RXKDx+VA5TYCx067QrQgkGCiyAU3Xw95PAmSW8C5gPlDGB8BNtjXs9n5m
+18PeTwJklkguQDoGXKW/YbfdrZZ0p+thzycBMktIF2j7GME7uIgdIbLG22fk
+qGXQHQ+DLiryDlknhAs07+MEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Y6J5MStzcECuwLBhsmmbJRUngPyAYcNk0z7ZEhNwQG7AsGHCac2bhwtAjsCw
+YbLY2vLm570DB7yTJ72NjcZTweR5eABkmW7bxrBhkpib8woF/zY93XqeNcgg
+6/S1bQwbJoRisWX/utXrnatRAmSWTtuunbkfw4bcc+mSt7Jiuqrv7ZoNjP/q
+ruIHl6+k3TSAGNjc9D7c12HbP3/1ip4EyCVbW97CgklABuHM9w6uf3bTlLlX
+LL5456oinaUl7woCD1mmUvGmprxH9vm2/dne4tPXr1qDn5vzzp0zjgCQMy5e
+9G64wRf22dmGkUvK19d1T3/s8xL/8+fTbijA6KhDeviwb8bqmbbbdnuGRj1W
+AhjIE2tr3syM99BDbcLeiWw+sH9FOIQ3kBVkq+pyBtar+KRLvRWu25cOHcKw
+IT9sbBit1k13FLr3FXavEfbY8Ob4cY/kJGSLer0VnEjJe5H4T015b71lIhzF
+OQCZRhp++nSHMeuZAXGL3izlX1jo7x0AziILl7Y//LAx4O1YXjZ/Fbcozllc
+JDMDWWVlxRT2msTj0Mjs7VkAeYcMYTPt0mrdGXK0qFIxZwF1YwEyhMxbqq4g
+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
+9w==
+    "], {{0, 127}, {500, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{500, 127},
+  PlotRange->{{0, 500}, {0, 127}}]], "Output",
+ ImageSize->{504, 127},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->17867524]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["SMARTree",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMARTree/guide/SMARTree"]], "MoreAbout",
+ CellID->111142069]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"TreeTransitionTypeI - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2014, 5, 9, 17, 8, 19.3302776}", "context" -> "SMARTree`", 
+    "keywords" -> {}, "index" -> True, "label" -> "SMARTree Paclet Symbol", 
+    "language" -> "en", "paclet" -> "SMARTree", "status" -> "None", "summary" -> 
+    "TreeTransitionTypeI[tree1, tree2] returns the transition type. If \
+tree1=tree2, returns {0,0}. If the distance is greater than 1, returns \
+{-1,-1}. If the distance = 1, returns {1, {operator1, ..}}. An operator {e1, \
+tc,ec) denoting a mSMC transtion where the recombination event occurs on the \
+edge e1 of tree1 and the emerging branch coaleces on the branch ec of tree1 \
+at time tc. ", "synonyms" -> {}, "title" -> "TreeTransitionTypeI", "type" -> 
+    "Symbol", "uri" -> "SMARTree/ref/TreeTransitionTypeI"}, "LinkTrails" -> 
+  "", "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4320, 123, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->177409807]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 16681, 430}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[612, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[691, 24, 179, 5, 70, "LinkTrail"],
+Cell[873, 31, 2339, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3215, 86, 62, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3280, 89, 1015, 30, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[4320, 123, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->177409807],
+Cell[CellGroupData[{
+Cell[4806, 140, 147, 5, 70, "ExampleSection",
+ CellID->13226149],
+Cell[CellGroupData[{
+Cell[4978, 149, 153, 4, 70, "Input",
+ CellID->623793352],
+Cell[5134, 155, 455, 11, 70, "Message",
+ CellID->351691725]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5626, 171, 680, 18, 70, "Input",
+ CellID->3416801],
+Cell[6309, 191, 202, 7, 36, "Output",
+ CellID->16467154],
+Cell[6514, 200, 417, 14, 36, "Output",
+ CellID->616501077],
+Cell[6934, 216, 240, 9, 36, "Output",
+ CellID->35220063]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7211, 230, 781, 20, 83, "Input",
+ CellID->161266198],
+Cell[7995, 252, 6351, 112, 148, "Output",
+ CellID->17867524]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14407, 371, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[14829, 385, 137, 3, 70, "MoreAbout",
+ CellID->111142069]
+}, Open  ]],
+Cell[14981, 391, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,434 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13652,        424]
+NotebookOptionsPosition[     10981,        340]
+NotebookOutlinePosition[     12660,        387]
+CellTagsIndexPosition[     12575,        382]
+WindowTitle->TreeNodeParent - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Genealogy",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:Genealogy/guide/Genealogy"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["GENEALOGY PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy\"\>":>Documentation`HelpLookup[
+       "paclet:Genealogy/guide/Genealogy"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy/ref/TreeNodeParent\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Genealogy/ref/TreeNodeParent"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/Genealogy/ref/\
+TreeNodeParent.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "Genealogy/ref/TreeNodeParent", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["TreeNodeParent", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"TreeNodeParent", "[", 
+       RowBox[{"tree", ",", "i"}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]returns the parent node of node ",
+     StyleBox["i",
+      FontSlant->"Italic"],
+     " in ",
+     StyleBox["tree",
+      FontSlant->"Italic"],
+     ". It is defined only for positive integer of ",
+     StyleBox["i",
+      FontSlant->"Italic"],
+     ". If i>= 2 n-1, returns -1.  Here n is the number of leaves."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->5862979],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->14334418],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "Genealogy`"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->43185605],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "compat"}], "MessageName"], ":", 
+  " ", "\<\"Combinatorica Graph and Permutations functionality has been \
+superseded by preloaded functionaliy. The package now being loaded may \
+conflict with this. Please see the Compatibility Guide for details.\"\>"}]], \
+"Message", "MSG",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->6991010]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tree", "=", 
+   RowBox[{"RandomCoalescentTree", "[", "5", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ShowLabeledGraph", "[", 
+  RowBox[{
+   RowBox[{"TreeToCombinatoricaGraph", "[", "tree", "]"}], ",", 
+   RowBox[{"VertexColor", "\[Rule]", "Red"}], ",", 
+   RowBox[{"EdgeColor", "\[Rule]", "Blue"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TreeNodeParent", "[", 
+  RowBox[{"tree", ",", "2"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"%", "==", 
+  RowBox[{
+   RowBox[{"TreeToAdjacencyList", "[", "tree", "]"}], "[", 
+   RowBox[{"[", "2", "]"}], "]"}]}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->522424331],
+
+Cell[BoxData[
+ GraphicsBox[{{
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.4, 0.}, {0.5, 0.005149226926320564}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.6000000000000001, 0.}, {0.5, 0.005149226926320564}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.5, 0.005149226926320564}, {0.65, 0.021160735356056358`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.8, 0.}, {0.65, 0.021160735356056358`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.65, 0.021160735356056358`}, {0.8250000000000001, 
+      0.10113316788582585`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{1., 0.}, {0.8250000000000001, 0.10113316788582585`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.2, 0.}, {0.5125000000000001, 0.23757859977435816`}}], 
+     {GrayLevel[0]}}, 
+    {RGBColor[0, 0, 1], Thickness[0.005], 
+     ArrowBox[{{0.8250000000000001, 0.10113316788582585`}, {
+      0.5125000000000001, 0.23757859977435816`}}], 
+     {GrayLevel[0]}}}, {
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.2, 0.}]}, 
+     {GrayLevel[0], InsetBox["1", Scaled[{-0.02, -0.02}, {0.2, 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.4, 0.}]}, 
+     {GrayLevel[0], InsetBox["2", Scaled[{-0.02, -0.02}, {0.4, 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{1., 0.}]}, 
+     {GrayLevel[0], InsetBox["3", Scaled[{-0.02, -0.02}, {1., 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.6000000000000001, 0.}]}, 
+     {GrayLevel[0], 
+      InsetBox["4", 
+       Scaled[{-0.02, -0.02}, {0.6000000000000001, 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.8, 0.}]}, 
+     {GrayLevel[0], InsetBox["5", Scaled[{-0.02, -0.02}, {0.8, 0.}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.5, 0.005149226926320564}]}, 
+     {GrayLevel[0], 
+      InsetBox["6", 
+       Scaled[{-0.02, -0.02}, {0.5, 0.005149226926320564}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.65, 0.021160735356056358`}]}, 
+     {GrayLevel[0], 
+      InsetBox["7", 
+       Scaled[{-0.02, -0.02}, {0.65, 0.021160735356056358`}], {1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.8250000000000001, 0.10113316788582585`}]}, 
+     {GrayLevel[0], 
+      InsetBox["8", 
+       Scaled[{-0.02, -0.02}, {0.8250000000000001, 0.10113316788582585`}], \
+{1, 0}]}, 
+     {GrayLevel[0]}}, 
+    {RGBColor[1, 0, 0], 
+     {PointSize[0.025], PointBox[{0.5125000000000001, 0.23757859977435816`}]}, 
+     {GrayLevel[0], 
+      InsetBox["9", 
+       Scaled[{-0.02, -0.02}, {0.5125000000000001, 0.23757859977435816`}], \
+{1, 0}]}, 
+     {GrayLevel[0]}}}},
+  AlignmentPoint->Center,
+  AspectRatio->Automatic,
+  Axes->False,
+  AxesLabel->None,
+  AxesOrigin->Automatic,
+  AxesStyle->{},
+  Background->None,
+  BaseStyle->{},
+  BaselinePosition->Automatic,
+  ColorOutput->Automatic,
+  ContentSelectable->Automatic,
+  CoordinatesToolOptions:>Automatic,
+  DisplayFunction:>$DisplayFunction,
+  Epilog->{},
+  FormatType:>TraditionalForm,
+  Frame->False,
+  FrameLabel->None,
+  FrameStyle->{},
+  FrameTicks->Automatic,
+  FrameTicksStyle->{},
+  GridLines->None,
+  GridLinesStyle->{},
+  ImageMargins->0.,
+  ImagePadding->All,
+  ImageSize->Automatic,
+  ImageSizeRaw->Automatic,
+  LabelStyle->{},
+  Method->Automatic,
+  PlotLabel->None,
+  PlotRange->{{0.15000000000000002`, 1.05}, {-0.19787736677948758`, 
+   0.4354559665538457}},
+  PlotRangeClipping->False,
+  PlotRangePadding->Automatic,
+  PlotRegion->Automatic,
+  PreserveImageOptions->Automatic,
+  Prolog->{},
+  RotateLabel->True,
+  Ticks->Automatic,
+  TicksStyle->{}]], "Output",
+ ImageSize->{364, 253},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->40499034],
+
+Cell[BoxData["6"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->72720076],
+
+Cell[BoxData["True"], "Output",
+ ImageSize->{32, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->202158568]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["Genealogy",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Genealogy/guide/Genealogy"]], "MoreAbout",
+ CellID->27653534]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"TreeNodeParent - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 7, 27, 22, 7, 21.8328005}", "context" -> "Genealogy`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Genealogy Paclet Symbol", 
+    "language" -> "en", "paclet" -> "Genealogy", "status" -> "None", 
+    "summary" -> 
+    "TreeNodeParent[tree, i] returns the parent node of node i in tree. It is \
+defined only for positive integer of i. If i>= 2 n-1, returns -1. Here n is \
+the number of leaves.", "synonyms" -> {}, "title" -> "TreeNodeParent", "type" -> 
+    "Symbol", "uri" -> "Genealogy/ref/TreeNodeParent"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3969, 114, 459, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->5862979]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 12434, 375}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[607, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[686, 24, 182, 5, 70, "LinkTrail"],
+Cell[871, 31, 2327, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3201, 86, 57, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3261, 89, 683, 21, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[3969, 114, 459, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->5862979],
+Cell[CellGroupData[{
+Cell[4453, 131, 147, 5, 70, "ExampleSection",
+ CellID->14334418],
+Cell[CellGroupData[{
+Cell[4625, 140, 96, 3, 70, "Input",
+ CellID->43185605],
+Cell[4724, 145, 403, 9, 70, "Message",
+ CellID->6991010]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5164, 159, 654, 17, 70, "Input",
+ CellID->522424331],
+Cell[5821, 178, 4172, 119, 274, "Output",
+ CellID->40499034],
+Cell[9996, 299, 157, 5, 36, "Output",
+ CellID->72720076],
+Cell[10156, 306, 161, 5, 36, "Output",
+ CellID->202158568]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10378, 318, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[10800, 332, 139, 3, 70, "MoreAbout",
+ CellID->27653534]
+}, Open  ]],
+Cell[10954, 338, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

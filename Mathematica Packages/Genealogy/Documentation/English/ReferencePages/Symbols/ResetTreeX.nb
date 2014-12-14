@@ -1,0 +1,372 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13165,        362]
+NotebookOptionsPosition[     10704,        283]
+NotebookOutlinePosition[     12286,        329]
+CellTagsIndexPosition[     12201,        324]
+WindowTitle->ResetTreeX - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Genealogy",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:Genealogy/guide/Genealogy"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["GENEALOGY PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy\"\>":>Documentation`HelpLookup[
+       "paclet:Genealogy/guide/Genealogy"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy/ref/ResetTreeX\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Genealogy/ref/ResetTreeX"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/Genealogy/ref/\
+ResetTreeX.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "Genealogy/ref/ResetTreeX", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["ResetTreeX", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"ResetTreeX", "[", "tree", "]"}]], "InlineFormula"],
+     " \[LineSeparator]resets the x cordinates of vertices of the ",
+     StyleBox["tree",
+      FontSlant->"Italic"],
+     " based on its topology"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->18728743],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->48942845],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "Genealogy`"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->669268563],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "compat"}], "MessageName"], ":", 
+  " ", "\<\"Combinatorica Graph and Permutations functionality has been \
+superseded by preloaded functionaliy. The package now being loaded may \
+conflict with this. Please see the Compatibility Guide for details.\"\>"}]], \
+"Message", "MSG",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->120956873]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tree", "=", 
+   RowBox[{"GetLocalTree", "[", 
+    RowBox[{
+     RowBox[{"RandomARG", "[", 
+      RowBox[{"4", ",", "2"}], "]"}], ",", "0.5"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ShowLabeledGraph", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"VertexColor", "\[Rule]", "Red"}], ",", 
+     RowBox[{"EdgeColor", "\[Rule]", "Blue"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{"tree", ",", 
+    RowBox[{"ResetTreeX", "[", "tree", "]"}]}], "}"}]}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->454125028],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJzt3V9oZGcZx/FRSw3allhWNyssRkFchDVBrMS4srt60eCfsqwWF7G62+KY
+spYNu4VNL5ZQKY0iOONVYG8CIkzpzbYIE7yQFW9yI5aKJZRcLIKa3kgUi9Gr
+4+/kOXPmZPZkksycc973nPl+SMN0Mpu8c95nnvM+73nnnY8/fe1i/b21Wu3G
+mL5dvHLz/PXrV1745gP6ny+/8PwPnn6fbrwY/veeWi28HQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAYwNpasLQUtFqu24Hc0MXwwWZzthaZbW5Gdyo4a7XoixAtO7oY
+Httst6OgbDfj8AwuXerG59ycq7YhE3QxSiEZnn99vtGNz+Vll81CdpJd/J+X
+u138h28t7+y4bBgQh+fWVnh6HKvtvPXU8r8/d64xtvin32+7bhsy0c1AKsI+
+dnzn119cDs6d+9v3Fo+/f3t8PLh8OVhfd9tCjLB28+U/BouLwdhYeGK8cCG6
+e3IyUHC+8YbTtiETuxlIpxhVXepidbRum9XV7ph3ejrY5pyDwr32s+bXOnMD
+Cs5796L75+eje3TeRKkpAzVa4QnFenlhYc9PraOPHQteecVR+zDSwhOkhjpT
+U2EcLi11fxBfNiELlVxUhV29Gjz0UDAx0R0CmZ2dYGYmeOklVWZBo+GmiRhl
+yj+KPY3AVYIlZyZ1W8nn9Gku21aBCq7Ll8MMk5pkNPTVl3pcAySFAeUYCrO+
+HuWfIAjuvzKicN3YCKcIuGhSapZ/gt0uPrAr79wJe5w5QBRA5VWcf/pYXOTi
+fImpl3vGtwfSiEil2cpKbm0CjhKZesypU91papTIAPnH6J/Mz4eLNCjKkIdW
+62iRqcF5fLEeZWFV9jBFtOJEwyGKMmRrdTU8ux01MpWClIhQFvFVhiFtbFCU
+IUvxzORRbW2FixWZly6FrPKPoSgrRLu+573E1bS8PGD+if/54mJ2rUE+7t0L
+80/mc3cUZUOzbQvq7bSftetVzz5BuOxwyARia9gIQp/llH8MRVkGlIdSktBm
+s5mamapD+Se58nlgd++GEQ4/qVCans732qUVZRpLU5IPLLlrQUfFU5ACJpP8
+E/+21dXMfhuyovyjs0MxY1QFgHKdBkUYwKiloMwzxtZWuEyImUmvFJl/jC2b
+52Q0gNFJQRoq5zRiWVkJR+PwhDp6bi6skYv/uwowirKjGpEUpKi4cCHHkxRv
+I/KEdbTDrQwoyo5qFFJQAWGp/KPAg3Ma/zjfSoWi7Egqn4K2twsKy4UFtpdx
+zJ9LA1aUqTynKDtQSgqq0Kogm5YsZlpAf+vUqd79r1AYf/JPbGUlXDhEUdZf
+78qgdn2f5YrlU/xlkVYrXLeP4nm7g4rCT1mIbe766806lRgF2R4vxU8RFzbo
+8sfum3lcnreyWmiaE50KdWKiKNtP2vro0s8F2bJ8JwPg0dtW0XEGKss79SjK
+9lO96ehc3xZ0GN4WBbkI32vobNQ88EYHTlCUpapYCrKL4263NBytbRXdTR6W
+K/8YirL7VSkFZbstzDDYVjFva2sl/vh3K8pG5SR1kMqkoOSHX/iAbRXzM/AW
+0P6w4ToRElQlBR3ywy+KxLaKObl7Nxz/VODA2mfVLSxU4bkMIy0FleyyvLfn
+xLJcrCkRf2rtrDQajq+eOJa+ZVlQoo1bj/rhF0ViW8VsVS//mPX10SzK+m3c
+6juNe5aWlH0G+/CLIrGtYlZsrWlV3/8SF2X/ez2KbdctQpflyu6ITPmnVrOv
+lbNRTyky9WJX4eNhOvLwvUul43ytV056YvvOD7uxHWchi23eAe2K+qinHPzX
+Vy/F3bQxOafIHB+P7jh/3lUz+2FbxSHpAFbyEnb/2P7zyTC2x8aiO554wlUz
+R5udJEL1Bzt9sVBrxN309pVlFWJxN50+Hd1QUlL36Wt+PnoDkc4j+nK1PJ5t
+FQdW/HuNC5KI7Xjgk4ztt54KYzv+0dRUdGNiIoptVW0+xHa12WlC4feZE+qp
+Tcstr/5yJ6y41AeLiza20DdVOrojXiure6xf9Nq3brJe02jE+lE37B77qR5m
+jz9grLI2eJ3OtooDqGz+6cT2+nrwqQ9Hsa3c8pvXU2Lb1jHGl1atLrPSLDW2
+FWn637m54mK7qpTVn3t89uHj4SG9+aTOFJs6qv1nIw8/V6lfbv1i3aQhivWj
+1XQaVp2faT4SnqFmH38ufMCdO8GbP+2t0y3R6eZhPkmKbRWPytUW0AVQ+F0+
+G8a2cksc2/1TxOELeUWaDppllIFje5Sp5Fd6V0rX19J36rXPhtXyqwuzZ35U
+XBsU/D+52vzVbnpRH924EZw5E6yNd4fF6+NzcY/p69atQ/1atlU8POdbQOdB
+sa1wsthu1LuxffZ6cW3oie1r13pj++9Tc8pgGp6NGg1gbMA5ORm+VOPCdnd9
+UuFrB6I6vf6hiUSeebhbp//l2WUVffEc1MmT4Xe13IpB9awKQ/Vjzwwq2yoe
+ng9bQGdFPa5Tj8bAihDFhiex/cHx9Nj+xYnl5Om18ns+2DSOzncqhDVi9Cr3
+thrND3SmCvWK+Oc76XW6sooVC0o4uqGnozBTItIDFXLxvJNNjOv7geUkqrGM
+IZ6iVGzrrOrVjJZie6wT23r1JWP7v+9sK0rtRydOBLdv+7jQZXh6UrbHqXpH
+8ebVulCdpBQwapiad/Gx+gMPHlw99a/Tbd7JJsb1O1WSP/pod9rQrmvoCBw8
+YTgayp5/LLb1ulZH67l4NZelUFR6UcMUh0/OhLG93zSmAlIPe+aZ8Cl4ODwY
+hp6aPSkdBPWUPwk2vvQQ1umNaKBy8yv1n2d95G3fKj1xmza06xqK2HjCUD+1
+oZbuVzGix/hzlPJW6t3eFNt2itF3r86q8XBdX7phZzrF9u2+1/H1ErBnkfrS
+KB2lUCVSZR77PEGvTvd6mfek+njJRk5lev8XmtpgK72VglS1xevTLDUll4JU
+jOdbQO9HHaH4UeZRbHt1Vg12Y9uyomLb5qCGie1kgVCW62bW5snJ8OWjROpV
+/rTLE2qbXubKikVGjv6W/u5Rj4alpuRSECvY40UgylrlvZZRul0FNIi116OO
+v29nVcW2DqbapsDII1fEsyjJK0de2XPxseHX0nq9/BUw6hq7POGqbRluqxgv
+AlHU6eWgbG/LP3Rbf0L3qwv0GK+mQ3uUaAtWveLszDU97V1VYrFtl5WV0vNu
+m13p02vcBhjOknBiUeV+Fx9dSjRPwwMruPTdhwu+L35hbePbea1HVTQq7SjR
+6dnrVKV0pH6J37piqcnWze7bTQUsl939E7+bb3mafxJHYM9yNXdnrtS2BYli
+UN+LHwbH0ywaGkWvrOyDZ5+dPRJvWv/xp1vuLj5GKyx69zdKNO/6R1vK1W4G
+zJ3ye0/z1tysR7UV3ZaabN2sLeyfONZ85ERbIWSLmrJcLpv69ANnR+A+B8f2
+rU+2eparFSgtthNte+1SyxakFTyZsMfutmN2KVD1xfeP59SzabubJd5H94/P
+O9tMvLPPrDprb5gnmvful9ztdb65uduovVtRJt+C6H4f9vZ3FeVfb9uKWZ1J
+f/uR7JqX+vQDr47AAbG9PeNZbCfa9vYn5lwPyXo/SO7db+TUs2nd1OguqvTh
+YmpvlHvVvJ4NuX1qW7teb/d0b+bNu38/co+OQNli26e2FRE8kbRu2uldMOxU
+eDD23OFN8zqL4hPN86Zt0WHr6d5Mm5fy9LP+E8MpW2z707b8gydh322mPeH9
+x364+8y/frrb1uS8WbifT98Q24MpLHjiP+dvN3U2oEv9PBBPbDbr/jYu/+71
++ekT28Mp5Pjtc83JC1HbXLzt+DA6zfPy2MVyiyL/nz6xPSyvUzgAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAABgJ/wdGr0Gh
+    "], {{0, 129}, {385, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{385, 129},
+  PlotRange->{{0, 385}, {0, 129}}]], "Output",
+ ImageSize->{389, 129},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->214591891]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["Genealogy",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Genealogy/guide/Genealogy"]], "MoreAbout",
+ CellID->463368640]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"ResetTreeX - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 7, 27, 22, 7, 13.1123851}", "context" -> "Genealogy`", 
+    "keywords" -> {}, "index" -> True, "label" -> "Genealogy Paclet Symbol", 
+    "language" -> "en", "paclet" -> "Genealogy", "status" -> "None", 
+    "summary" -> 
+    "ResetTreeX[tree] resets the x cordinates of vertices of the tree based \
+on its topology", "synonyms" -> {}, "title" -> "ResetTreeX", "type" -> 
+    "Symbol", "uri" -> "Genealogy/ref/ResetTreeX"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3725, 107, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->18728743]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 12059, 317}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[603, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[682, 24, 182, 5, 70, "LinkTrail"],
+Cell[867, 31, 2311, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3181, 86, 53, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3237, 89, 463, 14, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[3725, 107, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->18728743],
+Cell[CellGroupData[{
+Cell[4210, 124, 147, 5, 70, "ExampleSection",
+ CellID->48942845],
+Cell[CellGroupData[{
+Cell[4382, 133, 97, 3, 70, "Input",
+ CellID->669268563],
+Cell[4482, 138, 405, 9, 70, "Message",
+ CellID->120956873]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4924, 152, 578, 18, 65, "Input",
+ CellID->454125028],
+Cell[5505, 172, 4534, 82, 150, "Output",
+ CellID->214591891]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10100, 261, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[10522, 275, 140, 3, 70, "MoreAbout",
+ CellID->463368640]
+}, Open  ]],
+Cell[10677, 281, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

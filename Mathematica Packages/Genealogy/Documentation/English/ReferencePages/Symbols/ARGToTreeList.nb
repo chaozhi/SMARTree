@@ -1,0 +1,474 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     20012,        464]
+NotebookOptionsPosition[     17586,        389]
+NotebookOutlinePosition[     19239,        436]
+CellTagsIndexPosition[     19154,        431]
+WindowTitle->ARGToTreeList - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Genealogy",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:Genealogy/guide/Genealogy"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["GENEALOGY PACKAGE PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy Package\"\>":>
+       Documentation`HelpLookup["paclet:Genealogy/guide/Genealogy"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy/ref/ARGToTreeList\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Genealogy/ref/ARGToTreeList"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/Genealogy/ref/\
+ARGToTreeList.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "Genealogy/ref/ARGToTreeList", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["ARGToTreeList", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"ARGToTreeList", "[", 
+       StyleBox["arg", "TI"], "]"}]], "InlineFormula"],
+     "\[LineSeparator]transforms the ancestral recombination graph ",
+     StyleBox["arg", "TI"],
+     " into a list of genealogical trees at recombination points."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->325771157],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->78826401],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Genealogy`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->374060763],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ARGToTreeList", "[", 
+   RowBox[{"RandomGenealogy", "[", 
+    RowBox[{"4", ",", "2"}], "]"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ShowLabeledGraph", "[", 
+    RowBox[{
+     RowBox[{"ResetTreeX", "[", 
+      RowBox[{"Last", "[", "#", "]"}], "]"}], ",", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{"\"\<Recombination point=\>\"", "<>", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "0.01"}], "]"}], 
+        "]"}], "<>", "\"\<\\n\>\"", "<>", "\"\<Recombination type=\>\"", "<>", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "2"}], "]"}], "]"}], "]"}]}]}], ",", 
+     RowBox[{"VertexColor", "\[Rule]", "Red"}], ",", 
+     RowBox[{"EdgeColor", "\[Rule]", "Blue"}]}], "]"}], "&"}], "/@", 
+  "%"}]}], "Input",
+ CellLabel->"In[2]:=",
+ CellID->569761985],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+AAAAAAAAAABP/h/Rrdws
+    "], {{0, 317}, {386, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{386, 317},
+  PlotRange->{{0, 386}, {0, 317}}]], "Output",
+ ImageSize->{390, 317},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->154138548]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["Genealogy Package",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Genealogy/guide/Genealogy"]], "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"ARGToTreeList - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 7, 27, 22, 6, 57.5435578}", "context" -> "Genealogy`", 
+    "keywords" -> {}, "index" -> True, "label" -> 
+    "Genealogy Package Paclet Symbol", "language" -> "en", "paclet" -> 
+    "Genealogy Package", "status" -> "None", "summary" -> 
+    "ARGToTreeList[arg] transforms the ancestral recombination graph arg into \
+a list of genealogical trees at recombination points.", "synonyms" -> {}, 
+    "title" -> "ARGToTreeList", "type" -> "Symbol", "uri" -> 
+    "Genealogy/ref/ARGToTreeList"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3781, 106, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->325771157]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 19011, 424}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[606, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[685, 24, 182, 5, 70, "LinkTrail"],
+Cell[870, 31, 2339, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3212, 86, 56, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3271, 89, 485, 13, 70, "Usage"],
+Cell[CellGroupData[{
+Cell[3781, 106, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->325771157],
+Cell[CellGroupData[{
+Cell[4267, 123, 147, 5, 70, "ExampleSection",
+ CellID->78826401],
+Cell[4417, 130, 118, 3, 70, "Input",
+ CellID->374060763],
+Cell[CellGroupData[{
+Cell[4560, 137, 1040, 28, 101, "Input",
+ CellID->569761985],
+Cell[5603, 167, 11309, 193, 338, "Output",
+ CellID->154138548]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16973, 367, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[17395, 381, 149, 3, 70, "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+Cell[17559, 387, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,55 @@
+isrestart = False
+ 
+isparallel = True
+ 
+ascertainmodel = "M1"
+ 
+ngroupofchain = 2
+ 
+nchainofgroup = 16
+ 
+heatingAR = 0.5
+ 
+datafile = "Data_Standard.txt"
+ 
+outcompact = "SMARTree_OutCompact_M1P1_Data_Standard.txt"
+ 
+outcold = "SMARTree_OutCold_M1P1_Data_Standard.txt"
+ 
+outset = "SMARTree_OutSetting_M1P1_Data_Standard.txt"
+ 
+outstate = "SMARTree_MCMCState_M1P1_Data_Standard.txt"
+ 
+workdir = "D:\\Chaozhi\\DirectoryUW\\Project2_ARG\\ARG_workfolder\\SMARTree_M\
+athematicaCode_May9\\InferSMARTree\\"
+ 
+packagedir = "D:\\Chaozhi\\DirectoryUW\\Project2_ARG\\ARG_workfolder\\SMARTre\
+e_MathematicaCode_May9\\Mathematica Packages"
+ 
+nbp = 50000
+ 
+nsq = 10
+ 
+pritheta = {1, Infinity, 0, 0.01}
+ 
+prilambda = {1, Infinity, 0, 0.01}
+ 
+prieps = {1, 1, 0, 0.1}
+ 
+rjfreq = 10
+ 
+adpmax = 2000
+ 
+adprate = 0.0015
+ 
+itmin = 1
+ 
+itmax = 1000000
+ 
+printfreq = 100
+ 
+savefreq = 2
+ 
+swapfreq = 16
+ 
+isprint = False

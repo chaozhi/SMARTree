@@ -1,0 +1,385 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12534,        375]
+NotebookOptionsPosition[      9745,        288]
+NotebookOutlinePosition[     11477,        336]
+CellTagsIndexPosition[     11392,        331]
+WindowTitle->TreeAlongSequence - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["GENEALOGY PACKAGE PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy Package\"\>":>
+       Documentation`HelpLookup["paclet:Genealogy/guide/Genealogy"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Genealogy/ref/TreeAlongSequenece\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["Genealogy/ref/TreeAlongSequenece"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/Genealogy/ref/\
+TreeAlongSequenece.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "Genealogy/ref/TreeAlongSequenece", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["TreeAlongSequence", "ObjectName",
+ CellID->1224892054],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"TreeAlongSequence", "[", 
+       RowBox[{
+       "n", ",", " ", "\[Rho]", ",", " ", "method", ",", " ", "bool"}], 
+       "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives an animation of tree list generated from the \
+function RandomGenealogy[",
+     StyleBox["n", "TI"],
+     ", ",
+     StyleBox["\[Rho]", "TI"],
+     ", ",
+     StyleBox["method", "TI"],
+     "]. If ",
+     StyleBox["bool ", "TI"],
+     "= True, the leaves of each tree is sorted."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->662824318],
+
+Cell["\<\
+The options of TreeAlongSequence are the joint of the options of \
+ShowLabeledGraph and Animate.\
+\>", "Notes",
+ CellID->1067943069],
+
+Cell[TextData[{
+ "The ",
+ StyleBox["method", "TI"],
+ " takes \"HUDSON\", \"SRG\", or \"SMC\""
+}], "Notes",
+ CellID->223213378]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->43168632],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->794254067],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Genealogy`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->642700356],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreeAlongSequence", "[", 
+  RowBox[{"4", ",", "10", ",", "\"\<HUDSON\>\"", ",", "True", ",", 
+   RowBox[{"VertexColor", "\[Rule]", "Red"}], ",", 
+   RowBox[{"EdgeColor", "\[Rule]", "Blue"}], ",", 
+   RowBox[{"AnimationRunning", "\[Rule]", "False"}], ",", 
+   RowBox[{"RefreshRate", "\[Rule]", "4"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->395105543],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Genealogy`Private`x$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[Genealogy`Private`x$$], 0, "x"}, 0, 1}}, Typeset`size$$ = {
+    533., {88., 12.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, Genealogy`Private`x$5803$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {Genealogy`Private`x$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[Genealogy`Private`x$$, Genealogy`Private`x$5803$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       Genealogy`Private`tr$3868 = 
+        Genealogy`Private`f$3868[Genealogy`Private`x$$]; 
+       Combinatorica`ShowLabeledGraph[Genealogy`Private`tr$3868, 
+         FilterRules[{
+          Combinatorica`VertexColor -> RGBColor[1, 0, 0], 
+           Combinatorica`EdgeColor -> RGBColor[0, 0, 1], AnimationRunning -> 
+           False, RefreshRate -> 4}, 
+          Options[Combinatorica`ShowLabeledGraph]], PlotLabel -> 
+         StringJoin["x=", 
+           ToString[
+            Round[Genealogy`Private`x$$, 0.01]], ";HeightOfTree=", 
+           ToString[
+            Round[
+             Genealogy`HeightOfGraph[Genealogy`Private`tr$3868], 0.01]], 
+           ";TotalHeightOfEdges=", 
+           ToString[
+            Round[
+             Genealogy`TotalHeightOfEdges[Genealogy`Private`tr$3868], 0.01]], 
+           ".\n Topology=", 
+           ToString[
+            Genealogy`GetTreeTopology[Genealogy`Private`tr$3868]]]]), 
+      "Specifications" :> {{{Genealogy`Private`x$$, 0, "x"}, 0, 1, 
+         AnimationRunning -> False, RefreshRate -> 4, DisplayAllSteps -> True,
+          AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       Alignment -> Bottom, BaselinePosition -> Bottom, ControlType -> 
+        Animator, AppearanceElements -> None, SynchronousUpdating -> True, 
+        ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1789., {0., 177.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ ImageSize->{1793, 181},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->45960559]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["Genealogy Package",
+ BaseStyle->"Link",
+ ButtonData->"paclet:Genealogy/guide/Genealogy"]], "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 730},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"TreeAlongSequence - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 7, 27, 22, 7, 19.1963958}", "context" -> "Genealogy`", 
+    "keywords" -> {}, "index" -> True, "label" -> 
+    "Genealogy Package Paclet Symbol", "language" -> "en", "paclet" -> 
+    "Genealogy Package", "status" -> "None", "summary" -> 
+    "TreeAlongSequence[n, \\[Rho], method, bool] gives an animation of tree \
+list generated from the function RandomGenealogy[n, \\[Rho], method]. If bool \
+= True, the leaves of each tree is sorted.", "synonyms" -> {}, "title" -> 
+    "TreeAlongSequence", "type" -> "Symbol", "uri" -> 
+    "Genealogy/ref/TreeAlongSequenece"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4974, 154, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->43168632]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 11250, 324}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[610, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[689, 24, 209, 6, 70, "LinkTrail"],
+Cell[901, 32, 2359, 53, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3263, 87, 60, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[CellGroupData[{
+Cell[3348, 92, 698, 22, 70, "Usage"],
+Cell[CellGroupData[{
+Cell[4071, 118, 580, 17, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->662824318],
+Cell[4654, 137, 142, 4, 70, "Notes",
+ CellID->1067943069],
+Cell[4799, 143, 126, 5, 70, "Notes",
+ CellID->223213378]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4974, 154, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->43168632],
+Cell[CellGroupData[{
+Cell[5459, 171, 148, 5, 70, "ExampleSection",
+ CellID->794254067],
+Cell[5610, 178, 118, 3, 70, "Input",
+ CellID->642700356],
+Cell[CellGroupData[{
+Cell[5753, 185, 385, 8, 70, "Input",
+ CellID->395105543],
+Cell[6141, 195, 2930, 64, 70, "Output",
+ CellID->45960559]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9132, 266, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[9554, 280, 149, 3, 70, "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+Cell[9718, 286, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
